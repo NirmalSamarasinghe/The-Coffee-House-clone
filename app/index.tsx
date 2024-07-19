@@ -16,9 +16,11 @@ export default function Index() {
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
       <Text style={styles.options}>or</Text>
+      <View style={styles.iconContainer}>
       <Image source={require('../assets/images/google.png')}style={styles.socilIcon} />
       <Image source={require('../assets/images/fb.png')}style={styles.socilIcon} />
       <Image source={require('../assets/images/apple.png')}style={styles.socilIcon} />
+      </View>
     </View>
   );
 }
@@ -30,21 +32,28 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#CECECE',
   },
+
+  iconContainer:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    top: 115,
+  },
+
   title: {
     fontSize: 50,
     fontWeight: 'bold',
     position: 'relative',
-    top: 110,
+    top: 20,
   },
   subTitel: {
     fontSize: 20,
     position: 'relative',
-    top: 115,
+    top: 30,
   },
   loginInput: {
     height: 40,
     width: 300,
-    top:140,
+    top:50,
     borderColor: '#04644C',
     borderWidth: 2,
     marginBottom: 20,
@@ -53,7 +62,7 @@ const styles = StyleSheet.create({
   },
   button: {
     position:'relative',
-    top:128,
+    top:70,
     backgroundColor: '#04644C',
     paddingVertical: 10,
     paddingHorizontal: 50,
@@ -70,7 +79,7 @@ const styles = StyleSheet.create({
    height: 800,
    position: 'absolute',
    right: -180,
-   top:10, 
+   top:-50, 
    transform: [{rotate:'-65deg'}]
   },
   newAccount: {
@@ -79,7 +88,7 @@ const styles = StyleSheet.create({
     right: 90,
     textDecorationLine: 'underline',
     position: 'relative',
-    top: 130,
+    top: 55,
   },
   forgetPassword: {
     color: '#04644C',
@@ -87,39 +96,17 @@ const styles = StyleSheet.create({
     left: 90,
     textDecorationLine: 'underline',
     position: 'relative',
-    top: 110,
+    top: 38,
   },
   options: {
     fontSize: 18,
     color: '#04644C',
     position: 'relative',
-    top: 145,
+    top: 100,
   },
   socilIcon:{
-    position: 'relative',
     width:35,
     height: 35,
-    display: 'flex',
+    
   }
-  // googleIcon: {
-  //   width: 35,
-  //   height: 35,
-  //   position: 'relative',
-  //   top: 190,
-  //   right: 40,
-  // },
-  // fbIcon: {
-  //   width: 35,
-  //   height: 35,
-  //   position: 'relative',
-  //   top: 147,
-
-  // },
-  // appleIcon: {
-  //   width: 35,
-  //   height: 35,
-  //   position: 'relative',
-  //   top: 105,
-  //   left: 50,
-  // },
 });
